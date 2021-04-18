@@ -1,0 +1,66 @@
+h1 {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  padding-top: 75px;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.calculator {
+  padding-top: 50px;
+}
+
+.button {
+  background-color: #138eeb; /*Blue from Splash Page Buttons (old): #1290a4 */
+  border: none;
+  color: white;
+  padding: 12px 35px;
+  text-align: center;
+  font-size: 16px;
+  margin: 40px;
+  opacity: 1;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px 0px 5px 5px;
+  width: 175px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.calculator {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+#chart_div {
+  font-size: 140px;
+  font-family: "Playfair Display", serif;
+}
+
+#province {
+  font-size: 16px;
+}
+
+#form1 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
