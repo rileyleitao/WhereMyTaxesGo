@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="money-wings.png">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<link rel="stylesheet" href="Wheremytaxesgo.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link href="/dist/output.css" rel="stylesheet">
+<title>Where my taxes go</title>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="Wheremytaxesgo.json"></script>
+    
+</head>
+
+<body>
+    <center>
+<div>
+  <img width="75px" height="76px" src="money-wings.png"></img>
+    <h1 style="padding-bottom: 20px;">Where do taxes go?</h1>
+    <h3 style="padding-bottom: 15px;"> Find out how government spends your money</h3>
+</div>
+
+<div class=calculator>
+<form>
+  <div class="input1">
+<label for="grossIncome">Yearly Income</label>
+</div>
+<input type="number" id="grossIncome"><br>
+<div class="input2">
+<label for="province">Your Province</label>
+</div> 
+
+
+<select name="province" id="provinceForm">
+<option value="Alberta">Alberta</option>
+<option value="British Columbia">British Columbia</option>
+<option value="Manitoba">Manitoba</option>
+<option value="New Brunswick">New Brunswick</option>
+<option value="Newfoundland">Newfoundland</option>
+<option value="Northwest Territories">Northwest Territories</option>
+<option value="Nova Scotia">Nova Scotia</option>
+<option value="Nunavut">Nunavut</option>
+<option value="Ontario">Ontario</option>
+<option value="Prince Edward Island">Prince Edward Island</option>
+<option value="Quebec">Quebec</option>
+<option value="Saskatchewan">Saskatchewan</option>
+<option value="Yukon">Yukon</option>
+</select>
+</form>
+
+<button class=button onclick="getResults()">Calculate</button>
+</div>
+
+<h3 id="taxesOutput"></h3>
+<h3 id="provinceSelect"></h3>
+
+
+ <!--Div that will hold the pie chart-->
+ <div id="chart_div"></div>
+
+<center>
+</body>
+</html>
+
+
+<script>
+  //Main Function to display results
+  function getResults(){
+    let tax = document.getElementById("grossIncome").value;
+    let province = document.getElementById("provinceForm").value;
+
+    calculateTax(tax, province)
+    getProvince()
+    main()
+  }
+
+  // Output input field as your tax paid
+function calculateTax(){
+  let tax = document.getElementById("grossIncome").value;
+  document.getElementById("taxesOutput").innerHTML = "Total Tax Paid: " + tax;
+}
+function getProvince(){
+  let e = document.getElementById("provinceForm").value;
+  document.getElementById("provinceSelect").innerHTML = "Province: " + e;
+}
+
+
+</script>
+<script type="text/javascript" src="Wheremytaxesgo.js"></script>
